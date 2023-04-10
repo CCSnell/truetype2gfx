@@ -7,9 +7,9 @@ header('Content-Type: image/png');
 header('Cache-Control: no-cache, must-revalidate');
 
 // Create the image
-$im = imagecreatetruecolor(320, 240);
+$im = imagecreatetruecolor(128, 64);
 
-$dpi = 141;
+$dpi = 60;
 if (isset($_GET["dpi"])) $dpi = $_GET["dpi"];
 
 $text = 'Testing 123...';
@@ -24,7 +24,7 @@ if (isset($_GET["font"])) $font = $_GET["font"];
 // Create some colors
 $white = imagecolorallocate($im, 240, 240, 240);
 $black = imagecolorallocate($im, 0, 0, 0);
-imagefilledrectangle($im, 0, 0, 319, 239, $white);
+imagefilledrectangle($im, 0, 0, 127, 63, $white);
 
 // First we create our bounding box for the first text
 $bbox = imagettfbbox($size, 0, $font, $text);
